@@ -70,7 +70,7 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 
 ---
 
-# [fit] Case Study: 👂🏽🖌🛏
+# [fit] Case Study: :ear: :art:
 
 ---
 
@@ -149,12 +149,14 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 
 ---
 
+# Demo: D8
+
+---
+
 # Power of Decoupled Architectures
 
 * Content management can stay stable
 * (Multiple) frontends can change. Prototype in one language, build in another.
 * Barrier to entry is low
 
----
-
-# Demo: D8
+### ---
