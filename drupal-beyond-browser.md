@@ -149,7 +149,94 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 
 ---
 
-# Demo: D8
+![105%](./images/drupal-8-potato-1920x1080.jpg)
+
+## Drupal 8
+### So what do we get out of the box?
+
+
+---
+
+## 3 ways to create a REST API with Drupal 8
+
+---
+
+- Option: #1 - _**Using the core Rest Resources**_
+
+- Option: #2 - _**Using View REST exports**_
+
+- Option: #3 - _**Create custom REST endpoint**_
+
+---
+
+![right fit](./images/screenshot-d8-01.png)
+
+##Option: #1 - __*Using the core Rest Resources*__
+
+```php
+/node/{node}
+/entity/node_type/{node_type}
+/entity/block/{block}
+/comment/{comment}
+/entity/comment_type/{comment_type}
+```
+---
+![140% filtered](./images/drupal_2_1920x1080_widescreen.jpg)
+
+#Demo
+### Option #1
+
+---
+
+#Pros
+- Straight out of the box
+- Requires almost no setup
+- No custom code necessary
+
+#Cons
+- Absolutely no ﬂexibility
+- Lacks ability to version
+- Unable to limit output. Using the core REST resources
+
+---
+
+![right fit](./images/screenshot-d8-02.png)
+
+##Option: #2 - __*Using View REST exports*__
+- Views is now in core and also comes bundled with REST support out of the box.
+
+---
+![140%](./images/drupal_2_1920x1080_widescreen.jpg)
+
+#Demo
+### Option #2
+
+---
+
+#Pros
+- Straight out of the box
+- Familiar to developers
+- Manageable within the UI
+
+#Cons
+- Returns data with incorrect types
+- More ﬂexibility, but still limited in various areas
+- No ways to set custom parameters
+- Authentication issues. Using views REST export
+
+---
+
+##Option: #3 - __*Create custom REST endpoint*__
+
+---
+
+#Pros
+- Provides most ﬂexibility
+- Transformable output
+- Easier to manage versions
+
+#Cons
+- Requires reasonable programming knowledge
 
 ---
 
