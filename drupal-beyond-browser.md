@@ -64,9 +64,125 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 
 * Drupal 7, Services module plus Services Views
 * Screens needed to download content locally. Used bash scripts to rsync JSON and images from server to local network.
-* Custom module to “mark” feeds that needed updating (see: nodejs)
-* Twilio for SMS message with link to custom map
-* Custom module to render map
+
+---
+
+## Case Study: Field Museum
+### Custom module to “mark” feeds that needed updating
+
+* **TODO**: try nodejs
+* App only wanted to sync JSON data/images for new content
+* Services Views could create output for the last created/modified node of each type
+* **BUT**: Deleting a node would not be reflected
+
+---
+
+## Case Study: Field Museum
+### Custom module to “mark” feeds that needed updating
+
+* `hook_node_presave()`
+* `hook_node_delete()`
+* `hook_taxonomy_term_presave()`
+* `hook_taxonomy_term_delete()`
+
+---
+
+### Case Study: Field Museum
+#### Custom module to “mark” feeds that needed updating
+
+```php
+function field_dos_feed_status_node_presave($node) {
+  switch ($node->type) {
+    case 'amenity':
+      variable_set('amenities_timestamp', time());
+      break;
+    case 'behind_scenes_item':
+      variable_set('behind_scenes_items_timestamp', time());
+      break;  
+    case 'collection_highlight':
+      variable_set('collection_highlights_timestamp', time());
+      break;
+    case 'exhibit_item':
+      variable_set('exhibit_items_timestamp', time());
+      break;
+    case 'schedule_item':
+      variable_set('schedule_items_timestamp', time());
+      break;
+    case 'touchscreen_station':
+      variable_set('touchscreen_stations_timestamp', time());
+      break;
+    case 'itinerary':
+      variable_set('itineraries_timestamp', time());
+      break;  
+    default:
+      break;
+  }
+}
+```
+
+---
+
+### Case Study: Field Museum
+#### Custom module to “mark” feeds that needed updating
+
+```php
+function field_dos_feed_status_menu_object() {
+    $feeds = array(
+      array('amenities' => variable_get('amenities_timestamp', '')),
+      array('amenity-categories' => variable_get('amenity_categories_timestamp', '')),
+      array('behind-the-scenes-items' => variable_get('behind_scenes_items_timestamp', '')),
+      array('collection-highlights' => variable_get('collection_highlights_timestamp', '')),
+      array('exhibit-items' => variable_get('exhibit_items_timestamp', '')),
+      array('itineraries' => variable_get('itineraries_timestamp', '')),
+      array('locations' => variable_get('locations_timestamp', '')),
+      array('schedule' => variable_get('schedule_items_timestamp', '')),
+      array('touchscreen-stations' => variable_get('touchscreen_stations_timestamp', '')),
+    );
+    return $feeds;
+}
+```
+
+---
+
+### Case Study: Field Museum
+#### Custom module to “mark” feeds that needed updating
+
+```json
+[
+	{"amenities":1449786054},
+	{"amenity-categories":1450716038},
+	{"behind-the-scenes-items":1449606828},
+	{"collection-highlights":1449607778},
+	{"exhibit-items":1451915487},
+	{"itineraries":1449608094},
+	{"locations":1451915570},
+	{"schedule":1454972584},
+	{"touchscreen-stations":1439735864}
+]
+```
+
+---
+
+# Case Study: Field Museum
+### Front End
+
+* AngularJS (wait but I thought you said no browsers)
+* [TweenMax (http://greensock.com/tweenmax)](http://greensock.com/tweenmax)
+
+---
+
+# Case Study: Field Museum
+### Front End
+
+![inline fit](./images/tyrion-eyebrows.gif)
+
+---
+
+# Case Study: Field Museum
+### Front End
+
+* Single touch
+* Typography in Cinder is still…developing
 
 ---
 
