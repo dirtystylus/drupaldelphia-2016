@@ -4,6 +4,20 @@ autoscale: true
 
 # A Story: Content Management the Hard Way
 
+![inline fit mute](./videos/nav.mp4)
+
+^ Artifacts—images, video, audio
+
+^ Profiles of prominent Native American leaders
+
+^ 15-foot touch towers
+
+^ 12 kiosk touchscreens corresponding to artifact cases
+
+---
+
+# A Story: Content Management the Hard Way
+
 * Native American Voices exhibit at the Penn Museum
 * Hundreds of artifacts (~400)
 * Content management with static XML and local files
