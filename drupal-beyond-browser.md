@@ -1,6 +1,20 @@
 build-lists: true
 autoscale: true
 
+### __*Drupal Beyond the Browser:*__ Using Drupal to Power Apps and Touchscreens
+
+---
+
+# __*Who are we?*__
+
+* Mark Llobrera - Technology Director @ Bluecadet
+* `Twitter: @dirtystylus`
+
+-
+* Putra Roeung - Senior Developer @ Bluecadet
+* `Twitter: @putrabon`
+
+---
 
 # A Story: Content Management the Hard Way
 
@@ -284,6 +298,12 @@ function field_dos_feed_status_menu_object() {
 ## Drupal 8
 ### So what do we get out of the box?
 
+---
+
+- RESTful Web Services (rest)
+- Serialization (serialization)
+- Hypertext Application Language (hal)
+- HTTP Basic Authentication (basic_auth)
 
 ---
 
@@ -299,44 +319,39 @@ function field_dos_feed_status_menu_object() {
 
 ---
 
-![right fit](./images/screenshot-d8-01.png)
-
 ##Option: #1 - __*Using the core Rest Resources*__
 
-```php
-/node/{node}
-/entity/node_type/{node_type}
-/entity/block/{block}
-/comment/{comment}
-/entity/comment_type/{comment_type}
-```
+* `/node/nid?_format=hal_json`
+* `/entity/node_type/{node_type}`
+* `/entity/block/{block}`
+* `/comment/{comment}`
+
 ---
-![140% filtered](./images/drupal_2_1920x1080_widescreen.jpg)
 
 #Demo
 ### Option #1
 
 ---
 
-#Pros
-- Straight out of the box
-- Requires almost no setup
-- No custom code necessary
+# Pros
+* Straight out of the box
+* Requires almost no setup
+* No custom code necessary
 
-#Cons
-- Absolutely no ﬂexibility
-- Lacks ability to version
-- Unable to limit output. Using the core REST resources
+# Cons
+* Absolutely no ﬂexibility
+* Lacks ability to version
+* Unable to limit output. Using the core REST resources
 
 ---
 
-![right fit](./images/screenshot-d8-02.png)
+## Option: #2 - __*Using View REST exports*__
 
-##Option: #2 - __*Using View REST exports*__
 - Views is now in core and also comes bundled with REST support out of the box.
 
+![inline](./images/screenshot-d8-02.png)
+
 ---
-![140%](./images/drupal_2_1920x1080_widescreen.jpg)
 
 #Demo
 ### Option #2
@@ -344,15 +359,14 @@ function field_dos_feed_status_menu_object() {
 ---
 
 #Pros
-- Straight out of the box
-- Familiar to developers
-- Manageable within the UI
+* Straight out of the box
+* Familiar to developers
+* Manageable within the UI
 
 #Cons
-- Returns data with incorrect types
-- More ﬂexibility, but still limited in various areas
-- No ways to set custom parameters
-- Authentication issues. Using views REST export
+* More ﬂexibility, but still limited in various areas
+* No ways to set custom parameters
+* Authentication issues. Using views REST export
 
 ---
 
@@ -361,12 +375,12 @@ function field_dos_feed_status_menu_object() {
 ---
 
 #Pros
-- Provides most ﬂexibility
-- Transformable output
-- Easier to manage versions
+* Provides most ﬂexibility
+* Transformable output
+* Easier to manage versions
 
 #Cons
-- Requires reasonable programming knowledge
+* Requires reasonable programming knowledge
 
 ---
 
@@ -375,5 +389,6 @@ function field_dos_feed_status_menu_object() {
 * Content management can stay stable
 * (Multiple) frontends can change. Prototype in one language, build in another.
 * Barrier to entry is low
+* Use the endpoints for any devices
 
 ### ---
