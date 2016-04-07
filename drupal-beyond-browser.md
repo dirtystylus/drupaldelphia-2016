@@ -50,14 +50,14 @@ autoscale: true
 
 ---
 
+# [fit] Pain = Signal
+
+---
+
 # Connecting the Dots
 
 * Web stuff over here, lots of CMS/website builds
 * Applications over there (iOS, Android, Cinder)
-
----
-
-# [fit] Pain = signal
 
 ---
 
@@ -205,6 +205,8 @@ function field_dos_feed_status_menu_object() {
 
 ![inline fit](./images/tyrion-eyebrows.gif)
 
+^ Maybe we should have called this “Beyond the website”.
+
 ---
 
 # Case Study: Field Museum
@@ -212,6 +214,8 @@ function field_dos_feed_status_menu_object() {
 
 * Single touch
 * Typography in Cinder is still…developing
+
+^ So what are some benefits of using JavaScript over something like Cinder/Unity for a touchscreen application?
 
 ---
 
@@ -425,8 +429,8 @@ class DBLogResource extends ResourceBase {
 # Power of Decoupled Architectures
 
 * Content management can stay stable
-* (Multiple) frontends can change. Prototype in one language, build in another.
-* Barrier to entry is low
+* (Multiple) frontends can change. Prototype in one language, build in another
+* If you’re already using Drupal, the barrier to entry is low
 * Use the endpoints for any devices
 
 ---
