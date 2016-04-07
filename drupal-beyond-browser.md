@@ -313,7 +313,7 @@ function field_dos_feed_status_menu_object() {
 ^ RESTful Web Services exposes entities and other resources as a RESTful web API.
 ^ Provides a service for serialization of data to and from formats such as JSON and XML.
 ^ Serializes entities using Hypertext Application Language (HAL)
-^ This module implements basic user authentication using the HTTP Basic authentication provider.
+^ This module implements basic user authentication using the HTTP Basic authentication provider. It faciliates the use of an username and password for authentication when making calls to the REST API.
 
 ---
 
@@ -384,7 +384,47 @@ function field_dos_feed_status_menu_object() {
 
 ##Option: #3 - __*Create custom REST endpoint*__
 
-^ Being object-oriented by nature, D8 allows us to extend the base Resource Base class and create our own custom resources. This would be my recommendation.
+```php
+
+use Drupal\rest\ResourceResponse;
+
+/**
+*
+* @RestResource(
+*   id = "artwork_review",
+*   label = @Translation("Artwork reviews"),
+*   uri_paths = {
+*     "canonical" = "/reviews/{id}"
+*   }
+* )
+*/
+
+class ArtworkReviewResource extends ResourceBase {
+
+  /**
+   * Responds to GET requests.
+   *
+   * Returns a review entry for the specified ID.
+   *
+   * @return \Drupal\rest\ResourceResponse
+   *   The response containing the log entry.
+   *
+   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   */
+  public function get($id = NULL) {
+    if ($id) {
+      $record = db_query("SELECT * FROM {reviews} WHERE id = :rid", array(':rid' => $id))->fetchAssoc();
+      if (!empty($record)) {
+        return new ResourceResponse($record);
+      }
+    }
+  }
+} 
+
+```
+
+
+^ Being object-oriented by nature, D8 allows us to extend the base Resource Base class and create our own custom resources.
 
 ---
 
