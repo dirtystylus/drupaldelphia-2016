@@ -333,9 +333,6 @@ function field_dos_feed_status_menu_object() {
 
 ![inline](./images/screenshot-d8-01.png)
 
-^ Some of the available REST resources.
-^ The UI gives you the ability to restrict its formats and authentication.
-
 ---
 
 #Demo
@@ -425,6 +422,8 @@ class ArtworkReviewResource extends ResourceBase {
 
 
 ^ Being object-oriented by nature, D8 allows us to extend the base Resource Base class and create our own custom resources.
+
+^ With a custom module we can add plugins that can define new REST Resources. For instance, you can return data associated with reviews that are provided for Artworks and are saved in a custom table.
 
 ---
 
