@@ -383,47 +383,32 @@ function field_dos_feed_status_menu_object() {
 
 ```php
 
-use Drupal\rest\ResourceResponse;
-
-/**
-*
-* @RestResource(
-*   id = "artwork_review",
-*   label = @Translation("Artwork reviews"),
-*   uri_paths = {
-*     "canonical" = "/reviews/{id}"
-*   }
-* )
-*/
-
-class ArtworkReviewResource extends ResourceBase {
+class DBLogResource extends ResourceBase {
 
   /**
-   * Responds to GET requests.
-   *
-   * Returns a review entry for the specified ID.
-   *
-   * @return \Drupal\rest\ResourceResponse
-   *   The response containing the log entry.
-   *
-   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   * Responds to GET requests.   
    */
   public function get($id = NULL) {
     if ($id) {
-      $record = db_query("SELECT * FROM {reviews} WHERE id = :rid", array(':rid' => $id))->fetchAssoc();
+      $record = db_query("SELECT * FROM {watchdog} WHERE wid = :wid", array(':wid' => $id))
+        ->fetchAssoc();
       if (!empty($record)) {
         return new ResourceResponse($record);
       }
+
+      throw new NotFoundHttpException(t('Log entry with ID @id was not found', array('@id' => $id)));
     }
+
+    throw new BadRequestHttpException(t('No log entry ID was provided'));
   }
 } 
 
 ```
 
-
 ^ Being object-oriented by nature, D8 allows us to extend the base Resource Base class and create our own custom resources.
 
-^ With a custom module we can add plugins that can define new REST Resources. For instance, you can return data associated with reviews that are provided for Artworks and are saved in a custom table.
+^ With a custom module we can add plugins that can define new REST Resources. For instance, you can return a collection of the data from several nodes or custom data received through database query.
+
 
 ---
 
