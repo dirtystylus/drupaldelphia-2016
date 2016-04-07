@@ -17,6 +17,12 @@ autoscale: true
 
 ---
 
+# Outline
+
+* Story 
+
+---
+
 # A Story: Content Management the Hard Way
 
 ![inline fit mute](./videos/nav.mp4)
@@ -119,7 +125,7 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 ### Case Study: Field Museum
 #### Custom module to “mark” feeds that needed updating
 
-```php
+```
 function field_dos_feed_status_node_presave($node) {
   switch ($node->type) {
     case 'amenity':
@@ -131,18 +137,7 @@ function field_dos_feed_status_node_presave($node) {
     case 'collection_highlight':
       variable_set('collection_highlights_timestamp', time());
       break;
-    case 'exhibit_item':
-      variable_set('exhibit_items_timestamp', time());
-      break;
-    case 'schedule_item':
-      variable_set('schedule_items_timestamp', time());
-      break;
-    case 'touchscreen_station':
-      variable_set('touchscreen_stations_timestamp', time());
-      break;
-    case 'itinerary':
-      variable_set('itineraries_timestamp', time());
-      break;  
+    …
     default:
       break;
   }
@@ -154,17 +149,13 @@ function field_dos_feed_status_node_presave($node) {
 ### Case Study: Field Museum
 #### Custom module to “mark” feeds that needed updating
 
-```php
+```
 function field_dos_feed_status_menu_object() {
     $feeds = array(
       array('amenities' => variable_get('amenities_timestamp', '')),
       array('amenity-categories' => variable_get('amenity_categories_timestamp', '')),
       array('behind-the-scenes-items' => variable_get('behind_scenes_items_timestamp', '')),
-      array('collection-highlights' => variable_get('collection_highlights_timestamp', '')),
-      array('exhibit-items' => variable_get('exhibit_items_timestamp', '')),
-      array('itineraries' => variable_get('itineraries_timestamp', '')),
-      array('locations' => variable_get('locations_timestamp', '')),
-      array('schedule' => variable_get('schedule_items_timestamp', '')),
+      …
       array('touchscreen-stations' => variable_get('touchscreen_stations_timestamp', '')),
     );
     return $feeds;
