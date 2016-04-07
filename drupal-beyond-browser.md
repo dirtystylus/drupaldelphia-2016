@@ -19,7 +19,11 @@ autoscale: true
 
 # Outline
 
-* Story 
+* Story Time: How did we get here?
+* Case Study: Field Museum
+* Case Study: Van Gogh
+* Recipe: Drupal 7 + Services
+* Drupal 8 Demo
 
 ---
 
