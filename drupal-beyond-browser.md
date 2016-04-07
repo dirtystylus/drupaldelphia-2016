@@ -1,6 +1,7 @@
 build-lists: true
 autoscale: true
 
+
 ### __*Drupal Beyond the Browser:*__ Using Drupal to Power Apps and Touchscreens
 
 ---
@@ -296,22 +297,31 @@ function field_dos_feed_status_menu_object() {
 ![105%](./images/drupal-8-potato-1920x1080.jpg)
 
 ## Drupal 8
-### So what do we get out of the box?
+
+^ It’s finally here!
+
 
 ---
+
+# So what do we get out of the box?
 
 - RESTful Web Services (rest)
 - Serialization (serialization)
 - Hypertext Application Language (hal)
 - HTTP Basic Authentication (basic_auth)
 
+^ RESTful Web Services exposes entities and other resources as a RESTful web API.
+^ Provides a service for serialization of data to and from formats such as JSON and XML.
+^ Serializes entities using Hypertext Application Language (HAL)
+^ This module implements basic user authentication using the HTTP Basic authentication provider.
+
 ---
 
-## 3 ways to create a REST API with Drupal 8
+## __*3 ways*__ to create a REST API with Drupal 8
 
 ---
 
-- Option: #1 - _**Using the core Rest Resources**_
+- Option: #1 - _**Using Drupal 8 core Rest Resources**_
 
 - Option: #2 - _**Using View REST exports**_
 
@@ -319,17 +329,17 @@ function field_dos_feed_status_menu_object() {
 
 ---
 
-##Option: #1 - __*Using the core Rest Resources*__
+##Option: #1 - __*Using Drupal 8 core Rest Resources*__
 
-* `/node/nid?_format=hal_json`
-* `/entity/node_type/{node_type}`
-* `/entity/block/{block}`
-* `/comment/{comment}`
+![inline](./images/screenshot-d8-01.png)
+
+^ Some of the available REST resources.
+^ The UI gives you the ability to restrict its formats and authentication.
 
 ---
 
 #Demo
-### Option #1
+### __*Option #1*__
 
 ---
 
@@ -340,46 +350,50 @@ function field_dos_feed_status_menu_object() {
 
 # Cons
 * Absolutely no ﬂexibility
-* Lacks ability to version
-* Unable to limit output. Using the core REST resources
+* Lacks ability to set custom parameters
+* Unable to limit output
 
 ---
 
 ## Option: #2 - __*Using View REST exports*__
 
-- Views is now in core and also comes bundled with REST support out of the box.
+^ As many of you already know, the Views module was added to Drupal 8 Core. With RESTful Web Services also in Core, we now have all the tools we need to create highly customizable solutions out of the box.
 
 ![inline](./images/screenshot-d8-02.png)
 
 ---
 
 #Demo
-### Option #2
+### __*Option #2*__
+
+^ In this quick demo, I will show you how to create a view that returns a list of content in JSON via the REST API.
 
 ---
 
-#Pros
-* Straight out of the box
-* Familiar to developers
-* Manageable within the UI
+# Pros
+* It's straight out of the box
+* Most developers are familiar with Views
+* Manage your configs within the UI
 
-#Cons
+# Cons
 * More ﬂexibility, but still limited in various areas
 * No ways to set custom parameters
-* Authentication issues. Using views REST export
+* Authentication issues
 
 ---
 
 ##Option: #3 - __*Create custom REST endpoint*__
 
+^ Being object-oriented by nature, D8 allows us to extend the base Resource Base class and create our own custom resources. This would be my recommendation.
+
 ---
 
-#Pros
+# Pros
 * Provides most ﬂexibility
-* Transformable output
+* Transformable output (Special Entities)
 * Easier to manage versions
 
-#Cons
+# Cons
 * Requires reasonable programming knowledge
 
 ---
@@ -391,4 +405,6 @@ function field_dos_feed_status_menu_object() {
 * Barrier to entry is low
 * Use the endpoints for any devices
 
-### ---
+---
+
+## Resources
