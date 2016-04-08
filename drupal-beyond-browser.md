@@ -316,19 +316,21 @@ function field_dos_feed_status_menu_object() {
 
 # So what do we get out of the box?
 
-- REST: RESTful Web Services
+- RESTful Web Services
 - Serialization
 - HAL: Hypertext Application Language
 - HTTP Basic Authentication
 
-^ This module exposes entities and other resources as a RESTful web API.
+^ Which exposes entities and other resources as a RESTful web API.
 ^ It provides a service for serialization of data to and from formats such as JSON and XML.
-^ It serializes entities using Hypertext Application Language.
-^ This module faciliates the use of an username and password for authentication when making calls to the REST API.
+^ The HAL responses are the same as the normal JSON responses with an added _links key that contains more info about the requested data.
+^ This module faciliates the use of a username and password for authentication when making calls to the REST API.
 
 ---
 
 ## __*3 ways*__ to create a REST API with Drupal 8
+
+^ Now that we've gone through all of the available out of the box core modules, let's talk about 3 ways in which we can implement them.
 
 ---
 
@@ -359,7 +361,7 @@ function field_dos_feed_status_menu_object() {
 * No custom code necessary
 
 # Cons
-* Absolutely no ﬂexibility
+* Little flexibility
 * Lacks ability to set custom parameters
 * Unable to limit output
 
@@ -367,7 +369,7 @@ function field_dos_feed_status_menu_object() {
 
 ## Option: #2 - __*Using View REST exports*__
 
-^ As many of you already know, the Views module was added to Drupal 8 Core. With RESTful Web Services also in Core, we now have all the tools we need to create highly customizable solutions out of the box.
+^ As many of you already know, the Views module was added to Drupal 8 Core. and with RESTful Web Services also in Core, we now have all the tools we need to create customizable solutions out of the box.
 
 ![inline](./images/screenshot-d8-02.png)
 
@@ -386,7 +388,7 @@ function field_dos_feed_status_menu_object() {
 * Manage your configs within the UI
 
 # Cons
-* More ﬂexibility, but still limited in various areas
+* More flexibility, but still limited in various areas
 * No ways to set custom parameters
 * Authentication issues
 
@@ -420,14 +422,14 @@ class DBLogResource extends ResourceBase {
 
 ^ Being object-oriented by nature, D8 allows us to extend the base Resource Base class and create our own custom resources.
 
-^ With a custom module we can add plugins that can define new REST Resources. For instance, you can return a collection of the data from several nodes or custom data received through database query.
+^ With a custom module we can add plugins that we can define new REST Resources. For instance, you can return a collection of the data from several nodes or custom data received through database query.
 
 
 ---
 
 # Pros
-* Provides most ﬂexibility
-* Transformable output (Special Entities)
+* Provides most flexibility
+* Output special entities
 * Easier to manage versions
 
 # Cons
@@ -439,8 +441,7 @@ class DBLogResource extends ResourceBase {
 
 * Backend focuses on just having a good content model
 * Easier to upgrade front and backends separately
-* (Multiple) frontends can change. Prototype in one language, build in another
-* If you’re already using Drupal, the barrier to entry is low
+* If you’re already using Drupal, the barrier entry is low
 * Use the endpoints for any devices
 * Makes frontend work fun again!
 
@@ -454,7 +455,7 @@ class DBLogResource extends ResourceBase {
 * `Twitter: @dirtystylus`
 
 -
-* Putra Roeung - Senior Developer @ Bluecadet
+* Putra Bonaccorsi - Senior Developer @ Bluecadet
 * `Twitter: @putrabon`
 
 ---
