@@ -460,6 +460,14 @@ class DBLogResource extends ResourceBase {
 
 ---
 
+![inline 40%](./images/bluecadet_logo_blue.png)
+
+* @peteinge: Branching Out with LeafletJS (11:05am, 204A)
+* @willvedd: Beheading Drupal: Responsive Interfaces with RESTful api and Javascript (1:30pm, 201A)
+
+
+---
+
 ## Github
 
 * [https://github.com/dirtystylus/drupaldelphia-2016](https://github.com/dirtystylus/drupaldelphia-2016)
