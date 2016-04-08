@@ -1,4 +1,3 @@
-build-lists: true
 autoscale: true
 
 
@@ -6,7 +5,7 @@ autoscale: true
 
 ---
 
-# __*Who are we?*__
+![inline 40%](./images/bluecadet_logo_blue.png)
 
 * Mark Llobrera - Technology Director @ Bluecadet
 * `Twitter: @dirtystylus`
@@ -14,6 +13,12 @@ autoscale: true
 -
 * Putra Roeung - Senior Developer @ Bluecadet
 * `Twitter: @putrabon`
+
+---
+
+![](./images/bluecadet-capabilities.png)
+
+^ Bluecadet is an Emmy Award-winning digital agency that creates world-class websites, mobile apps, interactive installations, and immersive environments.
 
 ---
 
@@ -30,6 +35,8 @@ autoscale: true
 # A Story: Content Management the Hard Way
 
 ![inline fit mute](./videos/nav.mp4)
+
+#### [http://bluecadet.com/work/native-american-voices-the-people-here-and-now/](http://bluecadet.com/work/native-american-voices-the-people-here-and-now/)
 
 ^ Artifacts—images, video, audio
 
@@ -95,7 +102,9 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 
 ---
 
-![fit](./videos/field-dos.mp4)
+![inline fit](./videos/field-dos.mp4)
+
+[https://vimeo.com/160897482](https://vimeo.com/160897482)
 
 ---
 
@@ -225,7 +234,9 @@ function field_dos_feed_status_menu_object() {
 
 ---
 
-![fit](./videos/van-gogh.mp4)
+![inline fit](./videos/van-gogh.mp4)
+
+#### [https://vimeo.com/155694123](https://vimeo.com/155694123)
 
 ---
 
@@ -233,7 +244,7 @@ function field_dos_feed_status_menu_object() {
 
 * CMS originally in WordPress for initial build, client standardized on Drupal so we rebuilt the CMS
 * Drupal 7, Services and Services Views to provide JSON
-* Cinder (C++) application
+* Cinder (C++) ([https://www.libcinder.org](https://www.libcinder.org)) application
 
 ---
 
@@ -437,4 +448,17 @@ class DBLogResource extends ResourceBase {
 
 ---
 
-## Resources
+![inline 40%](./images/bluecadet_logo_blue.png)
+
+* Mark Llobrera - Technology Director @ Bluecadet
+* `Twitter: @dirtystylus`
+
+-
+* Putra Roeung - Senior Developer @ Bluecadet
+* `Twitter: @putrabon`
+
+---
+
+## Github
+
+* [https://github.com/dirtystylus/drupaldelphia-2016](https://github.com/dirtystylus/drupaldelphia-2016)
