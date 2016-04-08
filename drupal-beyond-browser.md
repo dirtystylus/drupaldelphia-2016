@@ -1,4 +1,3 @@
-//build-lists: true
 autoscale: true
 
 #### Drupaldelphia 2016
@@ -12,7 +11,7 @@ autoscale: true
 * `Twitter: @dirtystylus`
 
 -
-* Putra Roeung - Senior Developer @ Bluecadet
+* Putra Bonaccorsi - Senior Developer @ Bluecadet
 * `Twitter: @putrabon`
 
 ---
