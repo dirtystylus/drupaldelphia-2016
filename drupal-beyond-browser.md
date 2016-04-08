@@ -1,4 +1,3 @@
-build-lists: true
 autoscale: true
 
 
@@ -6,7 +5,7 @@ autoscale: true
 
 ---
 
-# __*Who are we?*__
+![inline 40%](./images/bluecadet_logo_blue.png)
 
 * Mark Llobrera - Technology Director @ Bluecadet
 * `Twitter: @dirtystylus`
@@ -14,6 +13,14 @@ autoscale: true
 -
 * Putra Roeung - Senior Developer @ Bluecadet
 * `Twitter: @putrabon`
+
+
+
+---
+
+![](./images/bluecadet-capabilities.png)
+
+^ Bluecadet is an Emmy Award-winning digital agency that creates world-class websites, mobile apps, interactive installations, and immersive environments.
 
 ---
 
@@ -233,7 +240,7 @@ function field_dos_feed_status_menu_object() {
 
 * CMS originally in WordPress for initial build, client standardized on Drupal so we rebuilt the CMS
 * Drupal 7, Services and Services Views to provide JSON
-* Cinder (C++) application
+* Cinder (C++) ([https://www.libcinder.org](https://www.libcinder.org)) application
 
 ---
 
@@ -446,3 +453,5 @@ class ArtworkReviewResource extends ResourceBase {
 ---
 
 ## Resources
+
+* [https://github.com/dirtystylus/drupaldelphia-2016](https://github.com/dirtystylus/drupaldelphia-2016)
