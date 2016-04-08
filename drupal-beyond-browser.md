@@ -14,8 +14,6 @@ autoscale: true
 * Putra Roeung - Senior Developer @ Bluecadet
 * `Twitter: @putrabon`
 
-
-
 ---
 
 ![](./images/bluecadet-capabilities.png)
@@ -37,6 +35,8 @@ autoscale: true
 # A Story: Content Management the Hard Way
 
 ![inline fit mute](./videos/nav.mp4)
+
+#### [http://bluecadet.com/work/native-american-voices-the-people-here-and-now/](http://bluecadet.com/work/native-american-voices-the-people-here-and-now/)
 
 ^ Artifacts—images, video, audio
 
@@ -102,7 +102,9 @@ David Thompson [(https://www.flickr.com/photos/39023889@N00/52377145)](https://w
 
 ---
 
-![fit](./videos/field-dos.mp4)
+![inline fit](./videos/field-dos.mp4)
+
+[https://vimeo.com/160897482](https://vimeo.com/160897482)
 
 ---
 
@@ -232,7 +234,9 @@ function field_dos_feed_status_menu_object() {
 
 ---
 
-![fit](./videos/van-gogh.mp4)
+![inline fit](./videos/van-gogh.mp4)
+
+#### [https://vimeo.com/155694123](https://vimeo.com/155694123)
 
 ---
 
@@ -452,6 +456,17 @@ class ArtworkReviewResource extends ResourceBase {
 
 ---
 
-## Resources
+![inline 40%](./images/bluecadet_logo_blue.png)
+
+* Mark Llobrera - Technology Director @ Bluecadet
+* `Twitter: @dirtystylus`
+
+-
+* Putra Roeung - Senior Developer @ Bluecadet
+* `Twitter: @putrabon`
+
+---
+
+## Github
 
 * [https://github.com/dirtystylus/drupaldelphia-2016](https://github.com/dirtystylus/drupaldelphia-2016)
