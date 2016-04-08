@@ -12,7 +12,7 @@ autoscale: true
 * `Twitter: @dirtystylus`
 
 -
-* Putra Roeung - Senior Developer @ Bluecadet
+* Putra Bonaccorsi - Senior Developer @ Bluecadet
 * `Twitter: @putrabon`
 
 ---
