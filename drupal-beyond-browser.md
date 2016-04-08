@@ -298,21 +298,22 @@ function field_dos_feed_status_menu_object() {
 ## Drupal 8
 
 ^ It’s finally here!
-
+^ One of the Drupal 8 initiatives that really excites me is Web Services.
+^ So for this particular portion of the talk, I'm going to showcase some of the available features in D8 core and attempt to implement some working examples.
 
 ---
 
 # So what do we get out of the box?
 
-- RESTful Web Services (rest)
-- Serialization (serialization)
-- Hypertext Application Language (hal)
-- HTTP Basic Authentication (basic_auth)
+- REST: RESTful Web Services
+- Serialization
+- HAL: Hypertext Application Language
+- HTTP Basic Authentication
 
-^ RESTful Web Services exposes entities and other resources as a RESTful web API.
-^ Provides a service for serialization of data to and from formats such as JSON and XML.
-^ Serializes entities using Hypertext Application Language (HAL)
-^ This module implements basic user authentication using the HTTP Basic authentication provider. It faciliates the use of an username and password for authentication when making calls to the REST API.
+^ This module exposes entities and other resources as a RESTful web API.
+^ It provides a service for serialization of data to and from formats such as JSON and XML.
+^ It serializes entities using Hypertext Application Language.
+^ This module faciliates the use of an username and password for authentication when making calls to the REST API.
 
 ---
 
@@ -320,11 +321,11 @@ function field_dos_feed_status_menu_object() {
 
 ---
 
-- Option: #1 - _**Using Drupal 8 core Rest Resources**_
+- Option: #1 - __*Using Drupal 8 core Rest Resources*__
 
-- Option: #2 - _**Using View REST exports**_
+- Option: #2 - __*Using View REST exports*__
 
-- Option: #3 - _**Create custom REST endpoint**_
+- Option: #3 - __*Create custom REST endpoint*__
 
 ---
 
@@ -336,6 +337,8 @@ function field_dos_feed_status_menu_object() {
 
 #Demo
 ### __*Option #1*__
+
+^ In this particular demo, we're going to ultize D8's core RESTful service to return data from a node.
 
 ---
 
@@ -423,10 +426,14 @@ class DBLogResource extends ResourceBase {
 
 # Power of Decoupled Architectures
 
-* Content management can stay stable
+* Backend focuses on just having a good content model
+* Easier to upgrade front and backends separately
 * (Multiple) frontends can change. Prototype in one language, build in another
 * If you’re already using Drupal, the barrier to entry is low
 * Use the endpoints for any devices
+* Makes frontend work fun again!
+
+^ Just going back to Mark's point eariler. With the Van Gogh project, we were able to switch rebuilt the content on another CMS without having to change our front end code.
 
 ---
 
