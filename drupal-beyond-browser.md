@@ -1,3 +1,4 @@
+//build-lists: true
 autoscale: true
 
 
@@ -431,7 +432,7 @@ class DBLogResource extends ResourceBase {
 * Easier to manage versions
 
 # Cons
-* Requires reasonable programming knowledge
+* Requires reasonable knowledge in PHP
 
 ---
 
