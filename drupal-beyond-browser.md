@@ -1,4 +1,3 @@
-//build-lists: true
 autoscale: true
 
 #### Drupaldelphia 2016
